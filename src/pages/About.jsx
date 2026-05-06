@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Users, Heart, Palette, Leaf, Award, MapPin, ArrowRight } from "lucide-react";
@@ -5,6 +6,9 @@ import SectionHeading from "../components/SectionHeading";
 import CTASection from "../components/CTASection";
 
 export default function About() {
+  useEffect(() => {
+    document.title = "About | Saakaara";
+  }, []);
   return (
     <div>
       {/* Hero */}
