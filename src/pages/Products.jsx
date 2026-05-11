@@ -157,7 +157,7 @@ export default function Products() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-              <img src="https://media.base44.com/images/public/69d8c78f64901a026749d5c0/2e8cb24f1_generated_20324695.png" alt="Corporate décor" className="rounded-2xl shadow-xl" />
+              <img src="/decor.jpeg" alt="Corporate décor" className="rounded-2xl shadow-xl" />
             </motion.div>
             <div>
               <p className="text-secondary font-medium text-sm uppercase tracking-widest mb-2">Décor & Custom Solutions</p>
