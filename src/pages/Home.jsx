@@ -177,7 +177,7 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                img: "https://media.base44.com/images/public/69d8c78f64901a026749d5c0/3e409aa68_generated_579e069e.png",
+                img: "sustainable-corporate-gifts.jpeg",
                 icon: "🎁",
                 title: "Sustainable Corporate Gifts",
                 desc: "Handcrafted gifts rooted in India's art and cultural heritage. Perfect for Diwali, New Year, client appreciation, and employee recognition.",
