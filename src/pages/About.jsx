@@ -100,7 +100,7 @@ export default function About() {
               viewport={{ once: true }}
               className="relative"
             >
-              <img src="https://media.base44.com/images/public/69d8c78f64901a026749d5c0/3e409aa68_generated_579e069e.png" alt="Indian artisan at work" className="rounded-2xl shadow-xl" />
+              <img src="/working-with-artisans.jpeg" alt="Indian artisan at work" className="rounded-2xl shadow-xl" />
               <div className="absolute -bottom-6 -left-6 bg-secondary text-white p-6 rounded-2xl shadow-lg">
                 <p className="font-heading text-2xl font-bold">50,000+</p>
                 <p className="text-sm text-white/80">Person Hours Created</p>
