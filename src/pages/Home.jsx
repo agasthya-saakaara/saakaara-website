@@ -191,7 +191,7 @@ export default function Home() {
                 tags: ["Onboarding Kits", "Conference Giveaways", "Paper Replacement", "Leadership Stationery"],
               },
               {
-                img: "https://media.base44.com/images/public/69d8c78f64901a026749d5c0/2e8cb24f1_generated_20324695.png",
+                img: "/decor.jpeg",
                 icon: "🏢",
                 title: "Sustainable Office Décor",
                 desc: "Props, table décor, and custom art installations that combine aesthetics with environmental responsibility.",
