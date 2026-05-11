@@ -54,7 +54,7 @@ export default function OurStory() {
               transition={{ delay: 0.2 }}
               className="hidden lg:block"
             >
-              <img src="https://media.base44.com/images/public/69d8c78f64901a026749d5c0/efe1a99c2_generated_5e315b5a.png" alt="Vasundhara Mavilla, Founder" className="rounded-2xl shadow-2xl max-h-96 mx-auto object-cover" />
+              <img src="/ourstoryimage.jpeg" alt="Vasundhara Mavilla, Founder" className="rounded-2xl shadow-2xl max-h-96 mx-auto object-cover" />
             </motion.div>
           </div>
         </div>
@@ -133,7 +133,7 @@ export default function OurStory() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
             >
-              <img src="https://media.base44.com/images/public/69d8c78f64901a026749d5c0/7771bac3b_generated_4af37dc8.png" alt="Forest conservation" className="rounded-2xl shadow-lg" />
+              <img src="/motherearthimage.jpeg" alt="Vasundhara in a flower field" className="rounded-2xl shadow-lg" />
             </motion.div>
           </div>
         </div>
