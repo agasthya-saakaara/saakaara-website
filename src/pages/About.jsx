@@ -70,7 +70,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* Impact Ecosystem */}
+      {/* Work Created */}
       <section className="py-24 bg-muted">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -109,6 +109,82 @@ export default function About() {
           </div>
         </div>
       </section>
+       
+      {/* Environmental Impact */}
+<section className="py-24 bg-muted">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div className="grid lg:grid-cols-2 gap-16 items-center">
+
+      <motion.div
+        initial={{ opacity: 0, x: -30 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        className="relative"
+      >
+        <img
+          src="/trees-impact.jpeg"
+          alt="Environmental impact through reusable products"
+          className="rounded-2xl shadow-xl"
+        />
+
+        <div className="absolute -bottom-6 -right-6 bg-secondary text-white p-6 rounded-2xl shadow-lg max-w-xs">
+          <p className="font-heading text-2xl font-bold">34,941+</p>
+          <p className="text-sm font-medium">Trees Protected</p>
+          <p className="text-xs text-white/80 mt-2">
+            Through reusable products and conscious procurement choices.
+          </p>
+        </div>
+      </motion.div>
+
+      <div>
+        <SectionHeading
+          center={false}
+          eyebrow="Our Impact"
+          title="Every Saakaara Order Creates Lasting Change"
+        />
+
+        <div className="space-y-6">
+
+          {[
+            {
+              title: "Forests Preserved",
+              desc: "Protecting up to 34,941 trees through reusable alternatives that reduce dependence on paper and disposable materials."
+            },
+            {
+              title: "Water Conserved",
+              desc: "Saving up to 2.91 billion litres of water by extending product life cycles and reducing resource-intensive production."
+            },
+            {
+              title: "Carbon Emissions Avoided",
+              desc: "Preventing up to 1,747 tonnes of CO₂ emissions, helping organizations lower their environmental footprint through conscious choices."
+            },
+            {
+              title: "Energy Saved",
+              desc: "Conserving enough energy to power approximately 2,696 homes for a year through reusable products that replace repeated manufacturing."
+            },
+            {
+              title: "Communities Empowered",
+              desc: "Supporting rural artisans, women-led collectives, social enterprises, and purpose-driven producers through meaningful, dignified work."
+            }
+          ].map((impact) => (
+            <div key={impact.title} className="flex items-start gap-4">
+              <div className="w-2 h-2 rounded-full bg-secondary mt-2 shrink-0" />
+              <div>
+                <h4 className="font-medium text-foreground">
+                  {impact.title}
+                </h4>
+                <p className="text-muted-foreground text-sm">
+                  {impact.desc}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Impact Grid */}
       <section className="py-24 bg-background">
