@@ -131,7 +131,7 @@ export default function About() {
 
         <div className="absolute -bottom-6 -right-6 text-white p-6 rounded-2xl shadow-lg max-w-xs"
         style={{ backgroundColor: "#3A5E2E" }}>
-          <p className="font-heading text-2xl font-bold">34,941+</p>
+          <p className="font-heading text-2xl font-bold">34,941</p>
           <p className="text-sm font-medium">Trees Protected</p>
           <p className="text-xs text-white/80 mt-2">
             Through reusable products and conscious procurement choices.
