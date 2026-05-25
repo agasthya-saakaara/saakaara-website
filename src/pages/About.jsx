@@ -124,7 +124,7 @@ export default function About() {
         className="relative"
       >
         <img
-          src="/trees-impact.jpeg"
+          src="/trees-impact.png"
           alt="Environmental impact through reusable products"
           className="rounded-2xl shadow-xl"
         />
