@@ -144,6 +144,7 @@ export default function About() {
           center={false}
           eyebrow="Our Impact"
           title="Every Saakaara Order Creates Lasting Change"
+          eyebrowColor="var(--olive)"
         />
 
         <div className="space-y-6">
