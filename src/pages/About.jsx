@@ -76,7 +76,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <SectionHeading center={false} eyebrow="Our Network" title="Every Saakaara Order Supports Real People" />
+              <SectionHeading center={false} eyebrow="Our Network" title="Every Saakaara order supports real people." />
               <div className="space-y-6">
                 {[
                   { title: "Village Artisans", desc: "Preserving traditional Indian crafts — Kalahasti, Cheriyal, Pattachitra, Bidri, Warli, Lippan and handloom textiles" },
@@ -143,7 +143,7 @@ export default function About() {
         <SectionHeading
           center={false}
           eyebrow="Our Impact"
-          title="Every Saakaara Order Creates Lasting Change"
+          title="Every Saakaara order creates lasting change"
           eyebrowColor="var(--olive)"
         />
 
