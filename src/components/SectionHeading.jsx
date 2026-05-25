@@ -1,8 +1,17 @@
-export default function SectionHeading({ eyebrow, title, subtitle, center = true }) {
+export default function SectionHeading({
+  eyebrow,
+  title,
+  subtitle,
+  center = true,
+  eyebrowColor
+}) {
   return (
     <div className={`max-w-3xl ${center ? "mx-auto text-center" : ""} mb-12`}>
       {eyebrow && (
-        <p className="text-secondary font-medium text-sm tracking-widest uppercase mb-3">
+        <p
+          className="text-secondary font-medium text-sm tracking-widest uppercase mb-3"
+          style={eyebrowColor ? { color: eyebrowColor } : undefined}
+        >
           {eyebrow}
         </p>
       )}
