@@ -57,7 +57,8 @@ export default function About() {
       </section>
 
       {/* Impact Banner */}
-      <section className="py-16 bg-secondary">
+      <section className="py-16"
+      style={{ backgroundColor: "#3A5E2E" }}>
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <p className="font-heading text-2xl md:text-3xl font-bold text-white leading-snug">
@@ -128,7 +129,8 @@ export default function About() {
           className="rounded-2xl shadow-xl"
         />
 
-        <div className="absolute -bottom-6 -right-6 bg-secondary text-white p-6 rounded-2xl shadow-lg max-w-xs">
+        <div className="absolute -bottom-6 -right-6 text-white p-6 rounded-2xl shadow-lg max-w-xs"
+        style={{ backgroundColor: "#3A5E2E" }}>
           <p className="font-heading text-2xl font-bold">34,941+</p>
           <p className="text-sm font-medium">Trees Protected</p>
           <p className="text-xs text-white/80 mt-2">
@@ -169,7 +171,9 @@ export default function About() {
             }
           ].map((impact) => (
             <div key={impact.title} className="flex items-start gap-4">
-              <div className="w-2 h-2 rounded-full bg-secondary mt-2 shrink-0" />
+              <div className="w-2 h-2 rounded-full mt-2 shrink-0"
+              style={{ backgroundColor: "#3A5E2E" }}
+              />
               <div>
                 <h4 className="font-medium text-foreground">
                   {impact.title}
