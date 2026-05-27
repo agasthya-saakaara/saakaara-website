@@ -9,7 +9,7 @@ const navLinks = [
   { label: "Why Choose Us", path: "/why-us" },
   { label: "Products & Services", path: "/products" },
   { label: "Our Story", path: "/our-story" },
-  { label: "Blog", path: "/blog" },
+//    { label: "Blog", path: "/blog" },
   { label: "Contact", path: "/contact" },
 ];
 
@@ -23,8 +23,8 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center gap-2">
             <img
-              src="https://media.base44.com/images/public/69d8c78f64901a026749d5c0/1b768c559_wordmark_primary.jpg"
-              alt="Saakaara - Thoughts to Things"
+              src="/wordmark_primary.svg"
+              alt="Saakaara Logo"
               className="h-10 w-auto mix-blend-multiply"
             />
           </Link>

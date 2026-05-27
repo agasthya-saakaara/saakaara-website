@@ -26,14 +26,16 @@ export default function WhyChooseUs() {
   return (
     <div>
       {/* Hero */}
-      <section className="py-24 bg-muted">
+      <section className="py-24 bg-muted"
+      style={{ backgroundColor: "#3A5E2E" }}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-4xl">
-            <p className="text-secondary font-medium tracking-widest text-sm uppercase mb-4">Why Saakaara</p>
-            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
-              Why Purpose-Driven Companies Choose Saakaara
+            <p className="text-white font-medium tracking-widest text-sm uppercase mb-4">Why Saakaara</p>
+            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+              Why purpose-driven companies choose Saakaara
             </h1>
-            <p className="mt-6 text-lg text-muted-foreground leading-relaxed max-w-3xl">
+            <p className="mt-6 text-lg text-white/80 leading-relaxed max-w-3xl">
               In a world of generic corporate gifts and disposable stationery, making a different choice has 
               never mattered more — for your brand reputation, your ESG commitments, and your employees' sense of belonging.
             </p>
@@ -44,7 +46,7 @@ export default function WhyChooseUs() {
       {/* Business Case */}
       <section className="py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading eyebrow="The Business Case" title="Your Mandate is Clear. We Make It Easy." />
+          <SectionHeading eyebrow="The Business Case" title="Your mandate is clear. We make it easy." />
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
             {[
               "Sustainability and Social Impact",
@@ -95,7 +97,7 @@ export default function WhyChooseUs() {
                 points: [
                   "Handcrafted by skilled artisans using traditional techniques",
                   "Customizable with your branding and packaging",
-                  "Culturally rich — Kalahasti, Cheriyal, Pattachitra & Bidri heritage",
+                  "Uplifting artforms like Etikoppaka, Channapatna, Cheriyal, Pattachitra and many more",
                   "Memorable — recipients keep and cherish these",
                 ],
               },
@@ -139,18 +141,23 @@ export default function WhyChooseUs() {
       </section>
 
       {/* Impact Proof */}
-      <section className="py-16 bg-secondary text-white">
+      <section className="py-16 bg-secondary text-white"
+       style={{ backgroundColor: "#3A5E2E" }}
+      >
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <p className="font-heading text-2xl md:text-3xl font-bold leading-snug">
-              Over 50,000 person hours of dignified work created in a decade.
+              34,941 trees saved, and over 50,000 person hours of meaningful work.
             </p>
             <p className="mt-4 text-white/80 max-w-3xl mx-auto">
-              This isn't just a number — it's the proof that social responsibility and environmental consciousness can be integrated into everyday corporate choices: products, décor, and gifting.
+              These aren’t just numbers — it's the impact of social responsibility and environmental consciousness integrated into everyday corporate choices: products, décor, and gifting.
             </p>
-            <Link to="/our-story" className="mt-6 inline-flex items-center gap-2 px-6 py-3 bg-white text-secondary rounded-full text-sm font-semibold hover:bg-white/90 transition-colors">
-              Read Our Story <ArrowRight size={16} />
-            </Link>
+            <Link to="/our-story"
+              className="mt-6 inline-flex items-center gap-2 px-6 py-3 bg-white rounded-full text-sm font-semibold hover:bg-white/90 transition-colors"
+              style={{ color: "#3A5E2E" }}
+              >
+  Read Our Story <ArrowRight size={16} />
+</Link>
           </motion.div>
         </div>
       </section>
@@ -158,7 +165,7 @@ export default function WhyChooseUs() {
       {/* Expertise */}
       <section className="py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading eyebrow="Our Team" title="50+ Years of Combined Expertise" />
+          <SectionHeading eyebrow="Our Team" title="50+ years of combined expertise" />
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
             {[
               "Corporate communications & stakeholder engagement",
@@ -216,11 +223,11 @@ export default function WhyChooseUs() {
       </section>
 
       <CTASection
-        title="Make Your Next Procurement Decision Count"
+        title="Make your next procurement decision count"
         subtitle="Join the growing community of purpose-driven businesses choosing Saakaara for sustainable corporate gifting and smart stationery solutions."
         primaryLabel="Request Consultation"
-        secondaryLabel="Schedule Smart Notebooks Demo"
-        secondaryLink="/contact"
+        secondaryLabel=""
+        secondaryLink=""
       />
     </div>
   );

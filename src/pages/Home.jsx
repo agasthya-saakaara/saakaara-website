@@ -35,17 +35,14 @@ export default function Home() {
               Every Gift Can Tell Your Company's Story
             </motion.h1>
             <motion.p variants={fadeUp} custom={2} className="mt-6 text-lg md:text-xl text-primary-foreground/80 leading-relaxed max-w-2xl">
-              10 years. 50,000+ person hours of livelihood created for artisans, women's cooperatives, and people with disabilities. Sustainable corporate gifting and eco-conscious stationery that proves your values through every purchase.
+              Over 50,000 person hours of livelihood created for artisans, women's cooperatives, and people with disabilities. 34,941 trees protected through reusable products and conscious procurement choices. A decade of sustainable corporate gifting and eco-conscious stationery that amplify your values through every purchase.
             </motion.p>
             <motion.p variants={fadeUp} custom={3} className="mt-3 text-primary-foreground/60 text-sm">
-              Hyderabad-based · Serving India's purpose-driven companies since 10+ years
+              Hyderabad-based · Serving India's purpose-driven organizations for over 10 years
             </motion.p>
             <motion.div variants={fadeUp} custom={4} className="mt-10 flex flex-wrap gap-4">
               <Link to="/products" className="inline-flex items-center gap-2 px-7 py-4 bg-secondary text-white font-medium rounded-full hover:opacity-90 transition-opacity">
                 Explore Sustainable Gifts <ArrowRight size={18} />
-              </Link>
-              <Link to="/products#notebooks" className="inline-flex items-center gap-2 px-7 py-4 bg-white/10 backdrop-blur-sm text-white border border-white/20 font-medium rounded-full hover:bg-white/20 transition-colors">
-                Get Smart Notebooks
               </Link>
               <Link to="/contact" className="inline-flex items-center gap-2 px-7 py-4 bg-white text-primary font-medium rounded-full hover:bg-white/90 transition-colors">
                 Request Corporate Quote
@@ -60,8 +57,8 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="Our Purpose"
-            title="Believe in the Power of Purposeful Gifting"
-            subtitle="Imagine making your corporate gifting a statement of who your company truly is. Every Saakaara gift reduces carbon footprint, supports rural artisans, and aligns with your ESG commitments — without compromising on quality, customization, or delivery timelines."
+            title="Believe in the power of purposeful gifting"
+            subtitle="Imagine making your corporate gifting a statement of who your company truly is. Every Saakaara solution reduces carbon footprint, supports rural artisans, and aligns with your ESG commitments — without compromising on quality, customization, or delivery timelines."
           />
           <motion.p
             initial={{ opacity: 0 }}
@@ -81,7 +78,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="Why Saakaara"
-            title="Solutions for Every Department"
+            title="Solutions for every department"
           />
           <div className="grid md:grid-cols-3 gap-8">
             {[
@@ -148,7 +145,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="Trusted Partners"
-            title="Trusted by Purpose-Led Organizations Across India"
+            title="Trusted by purpose-led organizations across India"
             subtitle="Over a decade of serving corporations, startups, and individuals with sustainable gifting solutions and smart reusable notebooks."
           />
           <motion.div
@@ -172,7 +169,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="Our Solutions"
-            title="Products at a Glance"
+            title="Products at a glance"
           />
           <div className="grid md:grid-cols-3 gap-8">
             {[
@@ -182,6 +179,7 @@ export default function Home() {
                 title: "Sustainable Corporate Gifts",
                 desc: "Handcrafted gifts rooted in India's art and cultural heritage. Perfect for Diwali, New Year, client appreciation, and employee recognition.",
                 tags: ["Festival Gifting", "Client Appreciation", "Employee Awards", "C-Suite Gifting"],
+                link: "/products#heritage-craft-gifts"
               },
               {
                 img: "https://media.base44.com/images/public/69d8c78f64901a026749d5c0/48f039037_generated_2445c1ca.png",
@@ -189,6 +187,7 @@ export default function Home() {
                 title: "Eco-Conscious Stationery",
                 desc: "Write, scan, cloud-sync. Wipe clean and reuse 100+ times. Dramatically reduce your organization's paper waste and carbon footprint.",
                 tags: ["Onboarding Kits", "Conference Giveaways", "Paper Replacement", "Leadership Stationery"],
+                link: "/products#notebooks"
               },
               {
                 img: "/decor.jpeg",
@@ -196,6 +195,7 @@ export default function Home() {
                 title: "Sustainable Office Décor",
                 desc: "Props, table décor, and custom art installations that combine aesthetics with environmental responsibility.",
                 tags: ["Office Redesigns", "Corporate Events", "Client Spaces", "Cultural Celebrations"],
+                link: "/products#decor"
               },
             ].map((product, i) => (
               <motion.div
@@ -222,7 +222,7 @@ export default function Home() {
                     ))}
                   </div>
                   <Link
-                    to="/products"
+                    to={product.link}
                     className="mt-5 inline-flex items-center gap-1 text-secondary text-sm font-medium hover:gap-2 transition-all"
                   >
                     Explore Collection <ArrowRight size={14} />
@@ -238,18 +238,17 @@ export default function Home() {
       <section className="py-24 bg-primary text-primary-foreground">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <p className="text-secondary font-medium tracking-widest text-sm uppercase mb-3">Our Impact</p>
-            <h2 className="font-heading text-3xl md:text-4xl font-semibold">A Decade of Proof</h2>
+            <h2 className="font-heading text-3xl md:text-4xl font-semibold">A Decade of Impact</h2>
             <p className="mt-4 text-primary-foreground/70 max-w-2xl mx-auto">
               Social responsibility and environmental consciousness aren't trade-offs — they're the foundation of everything we do.
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
-              { value: "50,000+", label: "Person Hours of Livelihood Created" },
-              { value: "10+", label: "Years of Sustained Impact" },
-              { value: "100%", label: "Traceable Supply Chains" },
-              { value: "6+", label: "Metro Cities Served" },
+              { value: "50,000+", label: "person hours of livelihood created" },
+              { value: "15+", label: "Indian artforms empowered" },
+              { value: "100%", label: "traceable supply chains" },
+              { value: "34,941", label: "trees saved through eco-conscious stationery" },
             ].map((stat, i) => (
               <motion.div
                 key={stat.label}

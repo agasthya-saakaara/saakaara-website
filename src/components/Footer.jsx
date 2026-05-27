@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="lg:col-span-1">
 
             <p className="text-primary-foreground/70 text-sm leading-relaxed mt-4">
-              50,000+ person hours of livelihood created for artisans, women's cooperatives & people with disabilities. Sustainable corporate gifts and eco-conscious stationery for purpose-driven companies across India.
+              Over 50,000 person hours of livelihood created for artisans, women's cooperatives & people with disabilities. Over 34,000 trees saved using eco-conscious stationery. Sustainable corporate gifts and eco-conscious stationery for purpose-driven organizations across India.
             </p>
           </div>
 
