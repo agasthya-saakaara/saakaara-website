@@ -12,13 +12,15 @@ export default function About() {
   return (
     <div>
       {/* Hero */}
-      <section className="py-24 bg-muted">
+      <section className="py-24 bg-muted"
+      style={{ backgroundColor: "#3A5E2E" }}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-4xl">
-            <p className="text-secondary font-medium tracking-widest text-sm uppercase mb-4">About Saakaara</p>
-            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">Who We Are</h1>
-            <p className="mt-6 text-lg text-muted-foreground leading-relaxed max-w-3xl">
-              Saakaara is a sustainability-driven social enterprise — one of Hyderabad's leading sustainable corporate gifting companies. Over a decade, we've generated <strong className="text-foreground">50,000+ person hours</strong> of meaningful work for artisans, people with disabilities, and women's self-help groups, while serving purpose-led corporations across India.
+            <p className="text-white font-medium tracking-widest text-sm uppercase mb-4">About Saakaara</p>
+            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">Who We Are</h1>
+            <p className="mt-6 text-lg text-white/80 leading-relaxed max-w-3xl">
+              Saakaara is a sustainability-driven social enterprise — one of Hyderabad's leading sustainable corporate gifting companies. We pride ourselves in the meaningful work we have done across uplifting artisans, empowering women self-help groups, and saving trees by promoting the use of eco-conscious stationery.
             </p>
           </motion.div>
         </div>
@@ -29,7 +31,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="Our Pillars"
-            title="We Exist at the Intersection of Three Powerful Commitments"
+            title="We exist at the intersection of three powerful commitments"
           />
           <div className="grid md:grid-cols-3 gap-8">
             {[
@@ -225,7 +227,7 @@ export default function About() {
           <p className="text-secondary font-medium tracking-widest text-sm uppercase mb-4">The Name</p>
           <h2 className="font-heading text-3xl md:text-4xl font-semibold leading-tight">Why "Saakaara"?</h2>
           <p className="mt-6 text-primary-foreground/80 text-lg leading-relaxed">
-            In Sanskrit, <em>sākāra</em> means <strong>"giving shape to thoughts"</strong> and <strong>"realizing dreams."</strong>
+            In Sanskrit, <em>saakaara</em> means <strong>"giving shape to thoughts"</strong> and <strong>"realizing dreams."</strong>
           </p>
           <p className="mt-4 text-primary-foreground/70 leading-relaxed">
             Our founder, Vasundhara Mavilla, started this journey in 2015 with a vision: What if every corporate 
@@ -234,24 +236,21 @@ export default function About() {
           <p className="mt-4 text-primary-foreground/70 leading-relaxed">
             Today, that vision is a decade-long movement serving purpose-driven organizations across industries.
           </p>
-          <p className="mt-6 text-secondary text-sm font-medium">
-            By the way, the right way to pronounce us is "SAA-KAA-RA" 😊
-          </p>
         </div>
       </section>
 
       {/* Credentials */}
       <section className="py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading eyebrow="Credentials" title="Experience You Can Trust" />
+          <SectionHeading eyebrow="Credentials" title="Experience you can trust" />
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {[
-              { icon: Award, text: "10+ Years serving India's leading corporations" },
-              { icon: Users, text: "50+ Years of combined team expertise" },
-              { icon: Leaf, text: "100% Traceable supply chains" },
-              { icon: Award, text: "Award-Winning artisan partners" },
-              { icon: MapPin, text: "Pan-India Delivery across all metros" },
-              { icon: Heart, text: "Certified non-profit collaborators" },
+              { icon: Award, text: "10+ years serving India's leading corporations" },
+              { icon: Users, text: "50+ years of combined team expertise" },
+              { icon: Leaf, text: "100% traceable supply chains" },
+              { icon: Award, text: "Award-winning artisan partners" },
+              { icon: MapPin, text: "Pan-India delivery across all metros" },
+              { icon: Heart, text: "Creating impact through non-profit collaboration" },
             ].map((cred, i) => (
               <motion.div
                 key={i}
@@ -270,10 +269,10 @@ export default function About() {
       </section>
 
       <CTASection
-        title="Partner With Purpose"
+        title="Partner with purpose"
         subtitle="Whether you're looking for eco-friendly Diwali corporate gifts, sustainable employee welcome kits, or bulk reusable notebooks for your organization, we'll help you make choices that reflect your values."
         primaryLabel="Request Corporate Proposal"
-        secondaryLabel="Meet Our Artisans"
+        secondaryLabel=""
         secondaryLink="/products"
       />
     </div>

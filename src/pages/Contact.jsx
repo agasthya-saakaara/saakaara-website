@@ -15,26 +15,33 @@ export default function Contact() {
   const [sending, setSending] = useState(false);
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    setSending(true);
-    // Simulate sending
-    await new Promise(r => setTimeout(r, 1500));
-    toast.success("Thank you! We'll be in touch within 24 hours.");
-    setFormData({ name: "", email: "", company: "", phone: "", interest: "", message: "" });
-    setSending(false);
-  };
+  e.preventDefault();
+
+  toast.success("Thank you! We'll be in touch within 24 hours.");
+
+  setFormData({
+    name: "",
+    email: "",
+    company: "",
+    phone: "",
+    interest: "",
+    message: "",
+  });
+};
 
   return (
     <div>
       {/* Hero */}
-      <section className="py-24 bg-muted">
+      <section className="py-24 bg-muted"
+      style={{ backgroundColor: "#3A5E2E" }}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-3xl">
-            <p className="text-secondary font-medium tracking-widest text-sm uppercase mb-4">Get in Touch</p>
-            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
+            <p className="text-white font-medium tracking-widest text-sm uppercase mb-4">Get in Touch</p>
+            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
               Let's Create Something Meaningful Together
             </h1>
-            <p className="mt-6 text-lg text-muted-foreground">
+            <p className="mt-6 text-lg text-white/80">
               Request a corporate gifting consultation, explore smart notebook solutions, 
               or simply learn more about how Saakaara can align your procurement with your values.
             </p>
@@ -49,11 +56,20 @@ export default function Contact() {
             {/* Form */}
             <div className="lg:col-span-3">
               <h2 className="font-heading text-2xl font-semibold mb-6">Request a Consultation</h2>
-              <form onSubmit={handleSubmit} className="space-y-5">
+              <form
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                netlify
+                onSubmit={handleSubmit}
+                className="space-y-5"
+              >
+                <input type="hidden" name="form-name" value="contact" />
                 <div className="grid sm:grid-cols-2 gap-5">
                   <div>
                     <label className="text-sm font-medium text-foreground mb-1 block">Full Name *</label>
                     <Input
+                      name="name"
                       required
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -63,6 +79,7 @@ export default function Contact() {
                   <div>
                     <label className="text-sm font-medium text-foreground mb-1 block">Work Email *</label>
                     <Input
+                      name="email"
                       required
                       type="email"
                       value={formData.email}
@@ -75,6 +92,7 @@ export default function Contact() {
                   <div>
                     <label className="text-sm font-medium text-foreground mb-1 block">Company</label>
                     <Input
+                      name="company"
                       value={formData.company}
                       onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                       placeholder="Organization name"
@@ -83,6 +101,7 @@ export default function Contact() {
                   <div>
                     <label className="text-sm font-medium text-foreground mb-1 block">Phone</label>
                     <Input
+                      name="phone"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       placeholder="+91 XXXXX XXXXX"
@@ -104,17 +123,23 @@ export default function Contact() {
                       <SelectItem value="other">Other</SelectItem>
                     </SelectContent>
                   </Select>
+                  <input
+                        type="hidden"
+                        name="interest"
+                        value={formData.interest}
+                      />
                 </div>
                 <div>
                   <label className="text-sm font-medium text-foreground mb-1 block">Tell Us More</label>
                   <Textarea
+                    name="message"
                     rows={5}
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     placeholder="Budget range, quantity, timeline, specific requirements..."
                   />
                 </div>
-                <Button type="submit" disabled={sending} className="w-full sm:w-auto px-8 py-3 rounded-full">
+                <Button type="submit" disabled={sending} className="w-full sm:w-auto px-10 py-6 rounded-full text-base font-medium">
                   {sending ? "Sending..." : "Submit Inquiry"}
                   {!sending && <Send size={16} className="ml-2" />}
                 </Button>
@@ -125,39 +150,39 @@ export default function Contact() {
             <div className="lg:col-span-2">
               <h2 className="font-heading text-2xl font-semibold mb-6">Direct Contact</h2>
               <div className="space-y-8">
-                <div className="bg-muted rounded-2xl p-6">
-                  <h3 className="font-medium text-foreground mb-1">Corporate Gifting</h3>
-                  <p className="text-muted-foreground text-sm mb-3">Vasundhara Mavilla, Founder</p>
+                <div className="bg-primary rounded-2xl p-6">
+                  <h3 className="font-medium text-white/80 mb-1">Corporate Gifting</h3>
+                  <p className="text-white text-sm mb-3">Vasundhara Mavilla, Founder</p>
                   <div className="space-y-2">
-                    <a href="mailto:vasundhara@saakaara.com" className="flex items-center gap-2 text-sm text-foreground hover:text-secondary transition-colors">
+                    <a href="mailto:vasundhara@saakaara.com" className="flex items-center gap-2 text-sm text-white hover:text-secondary transition-colors">
                       <Mail size={14} className="text-secondary" /> vasundhara@saakaara.com
                     </a>
-                    <a href="tel:+918977544958" className="flex items-center gap-2 text-sm text-foreground hover:text-secondary transition-colors">
+                    <a href="tel:+918977544958" className="flex items-center gap-2 text-sm text-white hover:text-secondary transition-colors">
                       <Phone size={14} className="text-secondary" /> +91 89775 44958
                     </a>
                   </div>
                 </div>
 
-                <div className="bg-muted rounded-2xl p-6">
-                  <h3 className="font-medium text-foreground mb-1">Smart Stationery</h3>
-                  <p className="text-muted-foreground text-sm mb-3">Purvi Shah</p>
+                <div className="bg-primary rounded-2xl p-6">
+                  <h3 className="font-medium text-white/80 mb-1">Eco-Conscious Stationery</h3>
+                  <p className="text-white text-sm mb-3">Purvi Shah</p>
                   <div className="space-y-2">
-                    <a href="mailto:purvi@saakaara.com" className="flex items-center gap-2 text-sm text-foreground hover:text-secondary transition-colors">
+                    <a href="mailto:purvi@saakaara.com" className="flex items-center gap-2 text-sm text-white hover:text-secondary transition-colors">
                       <Mail size={14} className="text-secondary" /> purvi@saakaara.com
                     </a>
-                    <a href="tel:+919948478622" className="flex items-center gap-2 text-sm text-foreground hover:text-secondary transition-colors">
+                    <a href="tel:+919948478622" className="flex items-center gap-2 text-sm text-white hover:text-secondary transition-colors">
                       <Phone size={14} className="text-secondary" /> +91 99484 78622
                     </a>
                   </div>
                 </div>
 
-                <div className="bg-muted rounded-2xl p-6">
-                  <h3 className="font-medium text-foreground mb-1">Location</h3>
+                <div className="bg-primary rounded-2xl p-6">
+                  <h3 className="font-medium text-white mb-1">Location</h3>
                   <div className="flex items-start gap-2 mt-2">
                     <MapPin size={14} className="text-secondary mt-0.5" />
-                    <p className="text-sm text-foreground">Hyderabad, Telangana, India</p>
+                    <p className="text-sm text-white">Hyderabad, Telangana, India</p>
                   </div>
-                  <p className="mt-3 text-xs text-muted-foreground">
+                  <p className="mt-3 text-xs text-white/70">
                     Serving: Hyderabad · Bangalore · Mumbai · Delhi NCR · Chennai · Pune
                   </p>
                 </div>

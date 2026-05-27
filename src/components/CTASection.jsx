@@ -26,13 +26,15 @@ export default function CTASection({
             {primaryLabel}
             <ArrowRight size={18} />
           </Link>
-          <Link
-            to={secondaryLink}
-            className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-primary-foreground/30 text-primary-foreground font-medium rounded-full hover:bg-primary-foreground/10 transition-colors"
-          >
-            {secondaryLabel}
-          </Link>
-        </div>
+          {secondaryLabel && (
+            <Link
+              to={secondaryLink}
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-primary-foreground/30 text-primary-foreground font-medium rounded-full hover:bg-primary-foreground/10 transition-colors"
+            >
+          {secondaryLabel}
+        </Link>
+      )}
+      </div>
         <div className="mt-10 text-sm text-primary-foreground/50">
           <p>Corporate Gifting: Vasundhara Mavilla · vasundhara@saakaara.com · +91 89775 44958</p>
         </div>

@@ -14,6 +14,8 @@ import OurStory from './pages/OurStory';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
 import Contact from './pages/Contact';
+import ScrollToTop from "./components/ScrollToTop";
+import ScrollToHash from "./components/ScrollToHash";
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -40,6 +42,8 @@ const AuthenticatedApp = () => {
 
   // Render the main app
   return (
+    <>
+    <ScrollToHash />
     <Routes>
       <Route element={<Layout />}>
         <Route path="/" element={<Home />} />
@@ -53,6 +57,7 @@ const AuthenticatedApp = () => {
         <Route path="*" element={<PageNotFound />} />
       </Route>
     </Routes>
+    </>
   );
 };
 
@@ -63,6 +68,7 @@ function App() {
     <AuthProvider>
       <QueryClientProvider client={queryClientInstance}>
         <Router>
+          <ScrollToTop />
           <AuthenticatedApp />
         </Router>
         <Toaster />

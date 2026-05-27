@@ -8,23 +8,24 @@ export default function Products() {
   return (
     <div>
       {/* Hero */}
-      <section className="py-24 bg-muted">
+      <section className="py-24 bg-muted"
+       style={{ backgroundColor: "#3A5E2E" }}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-4xl">
-            <p className="text-secondary font-medium tracking-widest text-sm uppercase mb-4">Product Catalogue</p>
-            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
-              Sustainable Corporate Gifts & Smart Notebooks
+            <p className="text-white font-medium tracking-widest text-sm uppercase mb-4">Product & Services</p>
+            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+              Sustainable corporate gifts & Eco-conscious stationery
             </h1>
-            <p className="mt-6 text-lg text-muted-foreground leading-relaxed max-w-3xl">
-              Explore Saakaara's range of eco-friendly corporate gifts, handmade artisan products, 
-              and AI-powered reusable notebooks. Bulk orders, custom branding, pan-India delivery.
+            <p className="mt-6 text-lg text-white/80 leading-relaxed max-w-3xl">
+              Explore Saakaara's range of eco-friendly corporate gifts, sustainable office décor, and eco-conscious stationery. Bulk orders, custom branding, pan-India delivery.
             </p>
           </motion.div>
         </div>
       </section>
 
       {/* Heritage Craft Gifts */}
-      <section className="py-24 bg-background">
+      <section id="heritage-craft-gifts" className="py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
@@ -38,7 +39,7 @@ export default function Products() {
                 Each piece is a living archive of Indian art and culture.
               </p>
               <div className="mt-6 grid grid-cols-2 gap-3">
-                {["Kalahasti (Andhra Pradesh)", "Cheriyal (Telangana)", "Pattachitra (Odisha)", "Warli (Maharashtra)", "Dhokra (West Bengal)", "Handloom Textiles"].map((craft) => (
+                {["Etikoppaka (Andhra Pradesh)", "Cheriyal (Telangana)", "Kondapalli (Andhra Pradesh)", "Channapatna (Karnataka)", "Dhokra (West Bengal)", "Bidri (Telangana)",].map((craft) => (
                   <div key={craft} className="flex items-center gap-2 text-sm">
                     <CheckCircle size={14} className="text-primary shrink-0" />
                     <span className="text-foreground">{craft}</span>
@@ -153,7 +154,7 @@ export default function Products() {
       </section>
 
       {/* Décor */}
-      <section className="py-24 bg-muted">
+      <section id="decor" className="py-24 bg-muted">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
@@ -191,13 +192,13 @@ export default function Products() {
       <section id="notebooks" className="py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
-            eyebrow="Smart Stationery"
-            title="Smart Reusable Notebooks — Eco-Conscious Stationery"
-            subtitle="The average professional fills 5-15 notebooks annually. Our AI-powered smart reusable notebooks let your team write freely, digitize instantly, and wipe clean for reuse 100+ times."
+            eyebrow="Eco-conscious stationery"
+            title="Notebooks made for the Earth"
+            subtitle="Reusable notebooks designed for modern organizations. Reduce paper consumption, digitize notes instantly, and support your sustainability goals through smarter stationery choices."
           />
           
           <div className="grid lg:grid-cols-2 gap-12 mt-16">
-            {/* ReNote Air */}
+            {/* Rewritable Notebook */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -208,8 +209,8 @@ export default function Products() {
                 <img src="https://media.base44.com/images/public/69d8c78f64901a026749d5c0/48f039037_generated_2445c1ca.png" alt="Eco-Conscious Stationery Air" className="w-full h-full object-cover" />
               </div>
               <div className="p-8">
-                <span className="px-3 py-1 bg-secondary/10 text-secondary text-xs font-medium rounded-full">Premium</span>
-                <h3 className="font-heading text-2xl font-semibold mt-3">Eco-Conscious Stationery Air</h3>
+                <span className="px-3 py-1 bg-primary text-white text-xs font-medium rounded-full">Premium Edition</span>
+                <h3 className="font-heading text-2xl font-semibold mt-3">Rewritable Notebooks and Diaries</h3>
                 <p className="text-sm text-muted-foreground mt-1">AI-Powered Smart Reusable Notebook</p>
                 <div className="mt-5 space-y-2">
                   {[
@@ -235,7 +236,7 @@ export default function Products() {
               </div>
             </motion.div>
 
-            {/* ReNote Eco */}
+            {/* Recycled Notebook */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -248,13 +249,12 @@ export default function Products() {
               </div>
               <div className="p-8">
                 <span className="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">Eco Edition</span>
-                <h3 className="font-heading text-2xl font-semibold mt-3">Eco-Conscious Stationery Eco</h3>
+                <h3 className="font-heading text-2xl font-semibold mt-3">Recycled Notebooks and Diaries</h3>
                 <p className="text-sm text-muted-foreground mt-1">Sustainable Smart Notebook</p>
                 <div className="mt-5 space-y-2">
                   {[
                     { icon: Leaf, text: "Made with recycled & plant-based materials" },
                     { icon: Smartphone, text: "AI-powered note digitization" },
-                    { icon: RefreshCcw, text: "Same write-wipe-reuse (100+ cycles)" },
                     { icon: Cloud, text: "Biodegradable components" },
                   ].map((f) => (
                     <div key={f.text} className="flex items-center gap-3 text-sm text-muted-foreground">
@@ -266,7 +266,7 @@ export default function Products() {
                 <p className="mt-5 p-3 bg-muted rounded-lg text-xs text-muted-foreground">
                   <strong className="text-foreground">ESG Highlight:</strong> Ideal for companies pursuing carbon-neutral operations and circular-economy procurement.
                 </p>
-                <Link to="/contact" className="mt-6 inline-flex items-center gap-2 px-6 py-3 bg-secondary text-white rounded-full text-sm font-medium">
+                <Link to="/contact" className="mt-6 inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-full text-sm font-medium">
                   Request Quote <ArrowRight size={16} />
                 </Link>
               </div>
@@ -277,8 +277,7 @@ export default function Products() {
           <div className="mt-16 bg-primary rounded-2xl p-10 text-primary-foreground text-center">
             <h3 className="font-heading text-2xl font-semibold">Enterprise Notebook Solutions</h3>
             <p className="mt-3 text-primary-foreground/70 max-w-2xl mx-auto">
-              Enterprise licensing for Eco-Conscious Stationery AI app (100+ users), custom integrations with corporate IT systems, 
-              training and onboarding support, pan-India delivery and account management.
+              Enterprise deployments of eco-conscious stationery with custom branding, onboarding support, pan-India delivery, and dedicated account management for large organizations (100+ users).
             </p>
             <Link to="/contact" className="mt-6 inline-flex items-center gap-2 px-7 py-3 bg-secondary text-white rounded-full text-sm font-medium">
               Contact for Enterprise <ArrowRight size={16} />
@@ -287,7 +286,10 @@ export default function Products() {
         </div>
       </section>
 
-      <CTASection />
+      <CTASection
+      title="Ready to align your gifting with your values?"
+      secondaryLabel=""
+      />
     </div>
   );
 }
