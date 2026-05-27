@@ -14,6 +14,7 @@ import OurStory from './pages/OurStory';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
 import Contact from './pages/Contact';
+import ThankYou from "./pages/ThankYou";
 import ScrollToTop from "./components/ScrollToTop";
 import ScrollToHash from "./components/ScrollToHash";
 
@@ -54,6 +55,7 @@ const AuthenticatedApp = () => {
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:slug" element={<BlogPost />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/thank-you" element={<ThankYou />} />
         <Route path="*" element={<PageNotFound />} />
       </Route>
     </Routes>
