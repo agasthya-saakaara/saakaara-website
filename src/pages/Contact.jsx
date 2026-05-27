@@ -24,23 +24,15 @@ export default function Contact() {
     const formDataToSend = new FormData(form);
 
     await fetch("/", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
-      body: new URLSearchParams(formDataToSend).toString(),
-    });
+  method: "POST",
+  headers: {
+    "Content-Type": "application/x-www-form-urlencoded",
+  },
+  body: new URLSearchParams(formDataToSend).toString(),
+});
 
-    toast.success("Thank you! We'll be in touch within 24 hours.");
-
-    setFormData({
-      name: "",
-      email: "",
-      company: "",
-      phone: "",
-      interest: "",
-      message: "",
-    });
+// redirect instead of toast + reset
+window.location.href = "/thank-you";
   } catch (error) {
     console.error(error);
     toast.error("Something went wrong. Please try again.");
