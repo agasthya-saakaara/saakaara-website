@@ -16,17 +16,37 @@ export default function Contact() {
 
   const handleSubmit = async (e) => {
   e.preventDefault();
+  setSending(true);
 
-  toast.success("Thank you! We'll be in touch within 24 hours.");
+  try {
+    const form = e.target;
 
-  setFormData({
-    name: "",
-    email: "",
-    company: "",
-    phone: "",
-    interest: "",
-    message: "",
-  });
+    const formDataToSend = new FormData(form);
+
+    await fetch("/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body: new URLSearchParams(formDataToSend).toString(),
+    });
+
+    toast.success("Thank you! We'll be in touch within 24 hours.");
+
+    setFormData({
+      name: "",
+      email: "",
+      company: "",
+      phone: "",
+      interest: "",
+      message: "",
+    });
+  } catch (error) {
+    console.error(error);
+    toast.error("Something went wrong. Please try again.");
+  } finally {
+    setSending(false);
+  }
 };
 
   return (
