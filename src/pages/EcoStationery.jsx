@@ -7,6 +7,10 @@ import SectionHeading from "../components/SectionHeading";
 import CTASection from "../components/CTASection";
 
 export default function EcoStationery() {
+  useEffect(() => {
+  document.title =
+    "Eco-Conscious Stationery | Rewritable, Cork & Seed Paper Notebooks";
+}, []);
   return (
     <div>
       {/* Hero */}
