@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Leaf, Users, Palette, ShieldCheck, Heart, Building2, Star, CheckCircle, Eye, Zap, Quote} from "lucide-react";
 import SectionHeading from "../components/SectionHeading";
 import CTASection from "../components/CTASection";
+import { useEffect } from "react";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
