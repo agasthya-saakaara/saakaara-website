@@ -20,7 +20,7 @@ export default function Decor() {
 
         <div className="absolute inset-0">
           <img
-            src="/public\kalahasti-decor.png"
+            src="/public/kalahasti-decor.png"
             alt="Indian Kalahasti Painting in corporate learning center"
             className="w-full h-full object-cover"
           />
