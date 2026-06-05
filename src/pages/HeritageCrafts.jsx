@@ -7,6 +7,10 @@ import SectionHeading from "../components/SectionHeading";
 import CTASection from "../components/CTASection";
 
 export default function HeritageCrafts() {
+  useEffect(() => {
+  document.title =
+    "Heritage Craft Gifts | Sustainable Corporate Gifting Inspired by Indian Artisans";
+}, []);
   return (
     <div>
       {/* Hero */}
