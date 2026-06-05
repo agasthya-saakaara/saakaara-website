@@ -4,12 +4,10 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
-  { label: "Home", path: "/" },
-  { label: "Who We Are", path: "/about" },
-  { label: "Why Choose Us", path: "/why-us" },
-  { label: "Products & Services", path: "/products" },
+  { label: "Heritage Crafts", path: "/heritage-crafts" },
+  { label: "Eco-Stationery", path: "/eco-stationery" },
+  { label: "Décor", path: "/decor" }, 
   { label: "Our Story", path: "/our-story" },
-//    { label: "Blog", path: "/blog" },
   { label: "Contact", path: "/contact" },
 ];
 
@@ -17,15 +15,28 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
 
+  const handleNavClick = () => {
+  setMobileOpen(false);
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+};
+
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border overflow-x-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          <Link to="/" className="flex items-center gap-2">
+        <div className="flex items-center justify-between h-16 md:h-20">
+          <Link
+            to="/"
+            onClick={handleNavClick}
+            className="flex items-center gap-2"
+          >
             <img
               src="/wordmark_primary.svg"
               alt="Saakaara Logo"
-              className="h-10 w-auto mix-blend-multiply"
+              className="h-8 md:h-10 w-auto max-w-[220px]"
             />
           </Link>
 
@@ -35,6 +46,7 @@ export default function Navbar() {
               <Link
                 key={link.path}
                 to={link.path}
+                onClick={handleNavClick}
                 className={`px-3 py-2 text-sm font-medium transition-colors rounded-md ${
                   location.pathname === link.path
                     ? "text-secondary"
@@ -48,7 +60,7 @@ export default function Navbar() {
               to="/contact"
               className="ml-4 px-5 py-2.5 bg-primary text-primary-foreground text-sm font-medium rounded-full hover:opacity-90 transition-opacity"
             >
-              Get Quote
+              Schedule Consultation
             </Link>
           </div>
 
@@ -72,11 +84,22 @@ export default function Navbar() {
             className="lg:hidden border-t border-border bg-background"
           >
             <div className="px-4 py-4 space-y-1">
+              <Link
+                to="/"
+                onClick={handleNavClick}
+                className={`block px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
+                  location.pathname === "/"
+                    ? "bg-muted text-secondary"
+                    : "text-foreground/70 hover:bg-muted"
+                }`}
+              >
+                Home
+              </Link>
               {navLinks.map((link) => (
                 <Link
                   key={link.path}
                   to={link.path}
-                  onClick={() => setMobileOpen(false)}
+                  onClick={handleNavClick}
                   className={`block px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
                     location.pathname === link.path
                       ? "bg-muted text-secondary"
@@ -88,10 +111,10 @@ export default function Navbar() {
               ))}
               <Link
                 to="/contact"
-                onClick={() => setMobileOpen(false)}
+                onClick={handleNavClick}
                 className="block text-center mt-4 px-5 py-3 bg-primary text-primary-foreground text-sm font-medium rounded-full"
               >
-                Get Quote
+                Schedule Consultation
               </Link>
             </div>
           </motion.div>

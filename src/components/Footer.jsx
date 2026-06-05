@@ -1,16 +1,33 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  ArrowRight,
+  Linkedin,
+  Instagram,
+} from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-primary text-primary-foreground">
+    <footer
+        className="text-white"
+        style={{ backgroundColor: "#231F20" }}
+      >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="lg:col-span-1">
-
+          <img
+            src="/icon_hybrid.svg"
+            alt="Saakaara"
+            className="h-10 w-auto"
+          />
             <p className="text-primary-foreground/70 text-sm leading-relaxed mt-4">
-              Over 50,000 person hours of livelihood created for artisans, women's cooperatives & people with disabilities. Over 34,000 trees saved using eco-conscious stationery. Sustainable corporate gifts and eco-conscious stationery for purpose-driven organizations across India.
+              Saakaara helps organizations create meaningful gifting, workplace, and stationery experiences rooted in sustainability, Indian craftsmanship, and social impact.
+            </p>
+            <p className="text-white/80 text-xs leading-relaxed mt-4">
+              50,000+ hours of livelihood created • 34,941 trees protected • 15+ Indian craft traditions supported
             </p>
           </div>
 
@@ -19,11 +36,12 @@ export default function Footer() {
             <h4 className="font-heading text-lg mb-4">Quick Links</h4>
             <ul className="space-y-3">
               {[
-                { label: "Who We Are", path: "/about" },
-                { label: "Why Choose Us", path: "/why-us" },
-                { label: "Products & Services", path: "/products" },
+                { label: "Home", path: "/" },
+                { label: "Heritage Crafts", path: "/heritage-crafts" },
+                { label: "Eco Stationery", path: "/eco-stationery" },
+                { label: "Décor", path: "/decor" },
                 { label: "Our Story", path: "/our-story" },
-                { label: "Blog", path: "/blog" },
+                { label: "Contact", path: "/contact" },
               ].map((link) => (
                 <li key={link.path}>
                   <Link
@@ -41,24 +59,20 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="font-heading text-lg mb-4">Our Solutions</h4>
+           <h4 className="font-heading text-lg mb-4">What We Stand For</h4>
             <ul className="space-y-3">
               {[
-                "Heritage Craft Gifts",
-                "Wellness Gift Combos",
-                "Eco-Conscious Stationery",
-                "Corporate Décor",
-                "Custom Gift Solutions",
+                "Indian Artisan Livelihoods",
+                "Responsible Procurement",
+                "Environmental Stewardship",
+                "Women-Led Enterprises",
+                "Meaningful Corporate Gifting",
               ].map((item) => (
-                <li key={item}>
-                  <Link
-                    to="/products"
-                    onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-                    className="text-primary-foreground/70 text-sm hover:text-primary-foreground transition-colors flex items-center gap-2"
-                  >
-                    <ArrowRight size={12} />
-                    {item}
-                  </Link>
+                <li
+                  key={item}
+                  className="text-primary-foreground/70 text-sm"
+                >
+                  {item}
                 </li>
               ))}
             </ul>
@@ -96,7 +110,27 @@ export default function Footer() {
             </ul>
           </div>
         </div>
+        <div className="flex items-center gap-4 mt-6">
 
+          <a
+            href="https://www.linkedin.com/company/saakaara"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white/60 hover:text-white transition-colors"
+          >
+            <Linkedin size={20} />
+          </a>
+
+          <a
+            href="https://www.instagram.com/saakaara"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white/60 hover:text-white transition-colors"
+          >
+            <Instagram size={20} />
+          </a>
+
+        </div>
         {/* Bottom */}
         <div className="mt-12 pt-8 border-t border-primary-foreground/10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight, Leaf, Users, Palette, ShieldCheck, Heart, Building2, Star, CheckCircle } from "lucide-react";
+import { ArrowRight, Leaf, Users, Palette, ShieldCheck, Heart, Building2, Star, CheckCircle, Eye, Zap, Quote} from "lucide-react";
 import SectionHeading from "../components/SectionHeading";
 import CTASection from "../components/CTASection";
 
@@ -22,7 +22,7 @@ export default function Home() {
           />
           <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/75 to-primary/40" />
         </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
           <motion.div
             initial="hidden"
             animate="visible"
@@ -31,7 +31,7 @@ export default function Home() {
             <motion.p variants={fadeUp} custom={0} className="text-secondary font-medium tracking-widest text-sm uppercase mb-4">
               Sustainable · Handcrafted · ESG-Aligned
             </motion.p>
-            <motion.h1 variants={fadeUp} custom={1} className="font-heading text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-primary-foreground leading-tight">
+            <motion.h1 variants={fadeUp} custom={1} className="font-heading text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-primary-foreground leading-tight">
               Every Gift Can Tell Your Company's Story
             </motion.h1>
             <motion.p variants={fadeUp} custom={2} className="mt-6 text-lg md:text-xl text-primary-foreground/80 leading-relaxed max-w-2xl">
@@ -41,9 +41,13 @@ export default function Home() {
               Hyderabad-based · Serving India's purpose-driven organizations for over 10 years
             </motion.p>
             <motion.div variants={fadeUp} custom={4} className="mt-10 flex flex-wrap gap-4">
-              <Link to="/products" className="inline-flex items-center gap-2 px-7 py-4 bg-secondary text-white font-medium rounded-full hover:opacity-90 transition-opacity">
-                Explore Sustainable Gifts <ArrowRight size={18} />
-              </Link>
+              <a
+                href="#solutions"
+                className="inline-flex items-center gap-2 px-7 py-4 bg-secondary text-white font-medium rounded-full hover:opacity-90 transition-opacity"
+              >
+                Explore Solutions
+                <ArrowRight size={18} />
+              </a>
               <Link to="/contact" className="inline-flex items-center gap-2 px-7 py-4 bg-white text-primary font-medium rounded-full hover:bg-white/90 transition-colors">
                 Request Corporate Quote
               </Link>
@@ -53,7 +57,7 @@ export default function Home() {
       </section>
 
       {/* Purpose Section */}
-      <section className="py-24 bg-background">
+      <section className="py-16 md:py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="Our Purpose"
@@ -74,13 +78,13 @@ export default function Home() {
       </section>
 
       {/* Why Choose - Three Columns */}
-      <section className="py-24 bg-muted">
+      <section className="py-16 md:py-24 bg-muted">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
-            eyebrow="Why Saakaara"
+            eyebrow="Built For the Organizations Of Today"
             title="Solutions for every department"
           />
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
                 icon: ShieldCheck,
@@ -140,32 +144,180 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Social Proof */}
-      <section className="py-24 bg-background">
+      {/* Who We Are */}
+      <section className="py-16 md:py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            eyebrow="Trusted Partners"
-            title="Trusted by purpose-led organizations across India"
-            subtitle="Over a decade of serving corporations, startups, and individuals with sustainable gifting solutions and smart reusable notebooks."
-          />
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="max-w-3xl mx-auto bg-card rounded-2xl border border-border p-10 text-center"
-          >
-            <p className="font-heading text-xl md:text-2xl italic text-foreground leading-relaxed">
-              "Our employees keep and use what they receive — and they know the story behind it."
-            </p>
-            <p className="mt-6 text-muted-foreground text-sm font-medium">
-              — HR Head, Leading Indian Conglomerate
-            </p>
-          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+            {/* Image */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="relative"
+            >
+              <img
+                src="/working-with-artisans.jpeg"
+                alt="Indian artisan at work"
+                className="rounded-2xl shadow-xl w-full"
+              />
+
+              <div
+                className="absolute -bottom-6 -left-6 text-white p-6 rounded-2xl shadow-lg"
+                style={{ backgroundColor: "#3A5E2E" }}
+              >
+                <p className="font-heading text-2xl font-bold">
+                  50,000+
+                </p>
+
+                <p className="text-sm text-white/80">
+                  Person Hours Created
+                </p>
+              </div>
+            </motion.div>
+
+      {/* Content */}
+      <div>
+
+        <SectionHeading
+          center={false}
+          eyebrow="Who We Are"
+          title="Sustainability rooted in craft, community, and conscious procurement"
+        />
+
+        <p className="text-muted-foreground leading-relaxed">
+          Saakaara is a sustainability-driven social enterprise helping organizations align procurement with purpose. Through sustainable gifting, eco-conscious stationery, and handcrafted décor, we create meaningful impact for both people and planet.
+        </p>
+
+        <div className="mt-8 space-y-5">
+
+          {[
+            {
+              title: "Village Artisans",
+              desc: "Preserving traditional Indian crafts while creating dignified livelihoods."
+            },
+            {
+              title: "Women-Led Self Help Groups",
+              desc: "Supporting economic independence and community empowerment."
+            },
+            {
+              title: "Purpose-Driven Supply Chains",
+              desc: "Partnering with NGOs, social enterprises, and conscious makers."
+            }
+          ].map((item) => (
+            <div key={item.title} className="flex items-start gap-4">
+
+              <div
+                className="w-2 h-2 rounded-full mt-2 shrink-0"
+                style={{ backgroundColor: "#3A5E2E" }}
+              />
+
+              <div>
+                <h4 className="font-medium text-foreground">
+                  {item.title}
+                </h4>
+
+                <p className="text-sm text-muted-foreground">
+                  {item.desc}
+                </p>
+              </div>
+
+            </div>
+          ))}
+
         </div>
-      </section>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+{/* Environmental Impact */}
+<section className="py-16 md:py-24 bg-muted">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <div>
+            <SectionHeading
+              center={false}
+              eyebrow="Our Impact"
+              title="Every Saakaara order creates lasting change"
+              eyebrowColor="var(--olive)"
+            />
+
+            <div className="space-y-6">
+
+              {[
+                {
+                  title: "Forests Preserved",
+                  desc: "Protecting up to 34,941 trees through reusable alternatives that reduce dependence on paper and disposable materials."
+                },
+                {
+                  title: "Water Conserved",
+                  desc: "Saving up to 2.91 billion litres of water by extending product life cycles and reducing resource-intensive production."
+                },
+                {
+                  title: "Carbon Emissions Avoided",
+                  desc: "Preventing up to 1,747 tonnes of CO₂ emissions, helping organizations lower their environmental footprint through conscious choices."
+                },
+                {
+                  title: "Energy Saved",
+                  desc: "Conserving enough energy to power approximately 2,696 homes for a year through reusable products that replace repeated manufacturing."
+                },
+                {
+                  title: "Communities Empowered",
+                  desc: "Supporting rural artisans, women-led collectives, social enterprises, and purpose-driven producers through meaningful, dignified work."
+                }
+              ].map((impact) => (
+                <div key={impact.title} className="flex items-start gap-4">
+                  <div className="w-2 h-2 rounded-full mt-2 shrink-0"
+                  style={{ backgroundColor: "#3A5E2E" }}
+                  />
+                  <div>
+                    <h4 className="font-medium text-foreground">
+                      {impact.title}
+                    </h4>
+                    <p className="text-muted-foreground text-sm">
+                      {impact.desc}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+      <motion.div
+        initial={{ opacity: 0, x: -30 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        className="relative"
+      >
+        <img
+          src="/trees-impact.png"
+          alt="Environmental impact through reusable products"
+          className="rounded-2xl shadow-xl"
+        />
+
+        <div className="absolute -bottom-6 -right-6 text-white p-6 rounded-2xl shadow-lg max-w-xs"
+        style={{ backgroundColor: "#3A5E2E" }}>
+          <p className="font-heading text-2xl font-bold">34,941</p>
+          <p className="text-sm font-medium">Trees Protected</p>
+        </div>
+      </motion.div>
+
+      
+    </div>
+  </div>
+</section>
+
 
       {/* Products at a Glance */}
-      <section className="py-24 bg-muted">
+          <section
+            id="solutions"
+            className="py-16 md:py-24 bg-muted scroll-mt-24"
+          >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="Our Solutions"
@@ -182,7 +334,7 @@ export default function Home() {
                 link: "/products#heritage-craft-gifts"
               },
               {
-                img: "https://media.base44.com/images/public/69d8c78f64901a026749d5c0/48f039037_generated_2445c1ca.png",
+                img: "stationery-main.png",
                 icon: "📓",
                 title: "Eco-Conscious Stationery",
                 desc: "Write, scan, cloud-sync. Wipe clean and reuse 100+ times. Dramatically reduce your organization's paper waste and carbon footprint.",
@@ -234,40 +386,215 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Impact Numbers */}
-      <section className="py-24 bg-primary text-primary-foreground">
+      {/* Why Organizations Choose Saakaara */}
+      <section className="py-16 md:py-24 bg-muted">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="font-heading text-3xl md:text-4xl font-semibold">A Decade of Impact</h2>
-            <p className="mt-4 text-primary-foreground/70 max-w-2xl mx-auto">
-              Social responsibility and environmental consciousness aren't trade-offs — they're the foundation of everything we do.
-            </p>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+
+          <SectionHeading
+            eyebrow="What sets us apart"
+            title="Why organizations choose Saakaara"
+            subtitle="Sustainable procurement without compromise on quality, customization, or execution."
+          />
+
+          {/* Business Case */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto mb-20">
+
             {[
-              { value: "50,000+", label: "person hours of livelihood created" },
-              { value: "15+", label: "Indian artforms empowered" },
-              { value: "100%", label: "traceable supply chains" },
-              { value: "34,941", label: "trees saved through eco-conscious stationery" },
-            ].map((stat, i) => (
+              "Sustainability & ESG alignment",
+              "Employee engagement & retention",
+              "Brand reputation & stakeholder trust",
+              "Transparent & ethical supply chains",
+            ].map((item, i) => (
               <motion.div
-                key={stat.label}
+                key={item}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
+                className="flex items-start gap-3 p-5 bg-card rounded-xl border border-border"
               >
-                <p className="font-heading text-4xl md:text-5xl font-bold text-secondary">{stat.value}</p>
-                <p className="mt-2 text-primary-foreground/70 text-sm">{stat.label}</p>
+                <CheckCircle
+                  size={18}
+                  className="text-primary mt-0.5 shrink-0"
+                />
+
+                <p className="text-sm font-medium text-foreground">
+                  {item}
+                </p>
+
               </motion.div>
             ))}
+
           </div>
-          <p className="text-center mt-10 text-primary-foreground/60 text-sm max-w-3xl mx-auto">
-            Generated through collaborations with progressive corporates, NGOs, and sustainability-focused makers — supporting artisans, people with disabilities, and women's self-help groups.
-          </p>
+
+          {/* Pillars */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+            {[
+              {
+                icon: Eye,
+                title: "100% Transparency",
+                subtitle: "Sustainability & Livelihood Support",
+                points: [
+                  "Who made your product",
+                  "What materials were used",
+                  "How production supported social good",
+                  "100% traceable supply chains",
+                ],
+              },
+              {
+                icon: Palette,
+                title: "Authenticity & Utility",
+                subtitle: "Crafted For Modern Organizations",
+                points: [
+                  "Handcrafted by skilled artisans",
+                  "Custom branding & packaging",
+                  "Rooted in Indian art traditions",
+                  "Designed to be memorable and useful",
+                ],
+              },
+              {
+                icon: Zap,
+                title: "Reliable Execution",
+                subtitle: "Built For Corporate Timelines",
+                points: [
+                  "Pan-India delivery",
+                  "Bulk orders with flexible MOQ",
+                  "Seasonal gifting support",
+                  "Structured approval workflows",
+                ],
+              },
+            ].map((pillar, i) => (
+              <motion.div
+                key={pillar.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.15 }}
+                className="bg-card rounded-2xl p-8 border border-border"
+              >
+
+                <div className="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center mb-5">
+                  <pillar.icon
+                    size={24}
+                    className="text-secondary"
+                  />
+                </div>
+
+                <p className="text-secondary text-sm font-medium">
+                  {pillar.subtitle}
+                </p>
+
+                <h3 className="font-heading text-xl font-semibold mt-1">
+                  {pillar.title}
+                </h3>
+
+                <ul className="mt-5 space-y-3">
+
+                  {pillar.points.map((point) => (
+                    <li
+                      key={point}
+                      className="flex items-start gap-2 text-sm text-muted-foreground"
+                    >
+                      <CheckCircle
+                        size={14}
+                        className="text-primary mt-0.5 shrink-0"
+                      />
+
+                      {point}
+
+                    </li>
+                  ))}
+
+                </ul>
+
+              </motion.div>
+            ))}
+
+          </div>
+
         </div>
       </section>
+    {/* Testimonials */}
+      <section
+        className="py-16 md:py-24 text-primary-foreground"
+        style={{ backgroundColor: "#3A5E2E" }}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
+          <div className="text-center max-w-4xl mx-auto">
+
+          <p className="text-secondary font-medium tracking-widest text-sm uppercase mb-4">
+            Trusted Partners
+          </p>
+
+          <h2 className="font-heading text-2xl md:text-4xl lg:text-5xl font-semibold text-white leading-tight">
+            Trusted by purpose-driven organizations across India
+          </h2>
+
+          <p className="mt-6 text-white/70 text-lg leading-relaxed">
+            Over a decade of sustainable gifting, ethical sourcing, and impact-led procurement partnerships.
+          </p>
+
+        </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+
+            {[
+              {
+                quote:
+                  "We stopped gifting generic products the year we found Saakaara. Our employees actually keep what they receive — and they know the story behind it.",
+                author: "HR Head",
+                company: "Leading Indian Conglomerate",
+              },
+              {
+                quote:
+                  "Saakaara helped us align our corporate gifting to our ESG goals for the first time. Clean supply chain, real social impact, beautiful products.",
+                author: "Procurement Director",
+                company: "Technology Company",
+              },
+              {
+                quote:
+                  "The artisan stories behind each gift became part of our client conversations. It became more than gifting — it became brand storytelling.",
+                author: "Marketing Head",
+                company: "Professional Services Firm",
+              },
+            ].map((t, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.15 }}
+                className="bg-white/[0.07] backdrop-blur-sm rounded-2xl p-8 border border-white/10"
+              >
+
+                <Quote
+                  size={24}
+                  className="text-secondary mb-4"
+                />
+
+                <p className="text-white/95 leading-relaxed italic">
+                  "{t.quote}"
+                </p>
+
+                <div className="mt-6 pt-4 border-t border-white/10">
+                  <p className="font-medium text-sm text-white">
+                    {t.author}
+                  </p>
+
+                  <p className="text-white/60 text-xs">
+                    {t.company}
+                  </p>
+                </div>
+
+              </motion.div>
+            ))}
+
+          </div>
+
+        </div>
+      </section>
       {/* CTA */}
       <CTASection />
     </div>

@@ -8,6 +8,9 @@ import UserNotRegisteredError from '@/components/UserNotRegisteredError';
 import Layout from './components/Layout';
 import Home from './pages/Home';
 import About from './pages/About';
+import HeritageCrafts from "./pages/HeritageCrafts";
+import Decor from "./pages/Decor";
+import EcoStationery from "./pages/EcoStationery";
 import WhyChooseUs from './pages/WhyChooseUs';
 import Products from './pages/Products';
 import OurStory from './pages/OurStory';
@@ -50,6 +53,9 @@ const AuthenticatedApp = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/why-us" element={<WhyChooseUs />} />
+        <Route path="/heritage-crafts" element={<HeritageCrafts />} />
+        <Route path="/decor" element={<Decor />} />
+        <Route path="/eco-stationery" element={<EcoStationery />} />
         <Route path="/products" element={<Products />} />
         <Route path="/our-story" element={<OurStory />} />
         <Route path="/blog" element={<Blog />} />

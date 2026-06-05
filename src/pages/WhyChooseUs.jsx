@@ -196,7 +196,7 @@ export default function WhyChooseUs() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <p className="text-secondary font-medium tracking-widest text-sm uppercase mb-3">Testimonials</p>
-            <h2 className="font-heading text-3xl md:text-4xl font-semibold">
+            <h2 className="font-heading text-2xl md:text-4xl font-semibold">
               Trusted by India's Leading Organizations
             </h2>
           </div>
