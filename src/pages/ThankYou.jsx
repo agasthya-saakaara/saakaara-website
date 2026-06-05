@@ -1,4 +1,10 @@
+import { useEffect } from "react";
+
 export default function ThankYou() {
+  useEffect(() => {
+  document.title =
+    "Thank You | Saakaara";
+}, []);
   return (
     <div className="min-h-[70vh] flex items-center justify-center px-4">
       <div className="max-w-2xl text-center">
