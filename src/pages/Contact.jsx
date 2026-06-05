@@ -7,8 +7,13 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import SectionHeading from "../components/SectionHeading";
 import { toast } from "sonner";
+import { useEffect } from "react";
 
 export default function Contact() {
+  useEffect(() => {
+  document.title =
+    "Contact Saakaara | Sustainable Corporate Gifting, Décor & Eco-Stationery";
+}, []);
   const [formData, setFormData] = useState({
     name: "", email: "", company: "", phone: "", interest: "", message: ""
   });
