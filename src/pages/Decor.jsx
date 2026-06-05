@@ -7,6 +7,10 @@ import SectionHeading from "../components/SectionHeading";
 import CTASection from "../components/CTASection";
 
 export default function Decor() {
+   useEffect(() => {
+    document.title =
+      "Sustainable Corporate Décor | Artisan-Led Workplace Design & Installations";
+  }, []);
   return (
     <div>
       {/* Hero */}
