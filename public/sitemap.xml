@@ -2,32 +2,14 @@
 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <url>
-    <loc>https://www.saakaara.com/</loc>
-  </url>
-
-   <url>
-    <loc>https://www.saakaara.com/about</loc>
-  </url>
-  
-  <url>
-    <loc>https://www.saakaara.com/our-story</loc>
-  </url>
-
-  <url>
-    <loc>https://www.saakaara.com/heritage-crafts</loc>
-  </url>
-
-  <url>
-    <loc>https://www.saakaara.com/decor</loc>
-  </url>
-
-  <url>
-    <loc>https://www.saakaara.com/eco-stationery</loc>
-  </url>
-
-  <url>
-    <loc>https://www.saakaara.com/contact</loc>
-  </url>
+  <url><loc>https://www.saakaara.com/</loc></url>
+  <url><loc>https://www.saakaara.com/about</loc></url>
+  <url><loc>https://www.saakaara.com/why-us</loc></url>
+  <url><loc>https://www.saakaara.com/heritage-crafts</loc></url>
+  <url><loc>https://www.saakaara.com/decor</loc></url>
+  <url><loc>https://www.saakaara.com/eco-stationery</loc></url>
+  <url><loc>https://www.saakaara.com/products</loc></url>
+  <url><loc>https://www.saakaara.com/our-story</loc></url>
+  <url><loc>https://www.saakaara.com/contact</loc></url>
 
 </urlset>
