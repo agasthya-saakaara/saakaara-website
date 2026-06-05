@@ -10,7 +10,10 @@ export default function CTASection({
   secondaryLink = "/products",
 }) {
   return (
-    <section className="py-24 bg-primary text-primary-foreground">
+    <section
+      className="py-24 text-primary-foreground"
+      style={{ backgroundColor: "#2C4723" }}
+    >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight">
           {title}
@@ -29,7 +32,7 @@ export default function CTASection({
           {secondaryLabel && (
             <Link
               to={secondaryLink}
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-primary-foreground/30 text-primary-foreground font-medium rounded-full hover:bg-primary-foreground/10 transition-colors"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/20 text-primary-foreground font-medium rounded-full hover:bg-white/10 transition-colors"
             >
           {secondaryLabel}
         </Link>

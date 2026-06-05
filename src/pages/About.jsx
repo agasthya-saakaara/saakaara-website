@@ -18,7 +18,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-4xl">
             <p className="text-white font-medium tracking-widest text-sm uppercase mb-4">About Saakaara</p>
-            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">Who We Are</h1>
+            <h1 className="font-heading text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">Who We Are</h1>
             <p className="mt-6 text-lg text-white/80 leading-relaxed max-w-3xl">
               Saakaara is a sustainability-driven social enterprise — one of Hyderabad's leading sustainable corporate gifting companies. We pride ourselves in the meaningful work we have done across uplifting artisans, empowering women self-help groups, and saving trees by promoting the use of eco-conscious stationery.
             </p>
@@ -225,7 +225,7 @@ export default function About() {
       <section className="py-24 bg-primary text-primary-foreground">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-secondary font-medium tracking-widest text-sm uppercase mb-4">The Name</p>
-          <h2 className="font-heading text-3xl md:text-4xl font-semibold leading-tight">Why "Saakaara"?</h2>
+          <h2 className="font-heading text-2xl md:text-4xl font-semibold leading-tight">Why "Saakaara"?</h2>
           <p className="mt-6 text-primary-foreground/80 text-lg leading-relaxed">
             In Sanskrit, <em>saakaara</em> means <strong>"giving shape to thoughts"</strong> and <strong>"realizing dreams."</strong>
           </p>

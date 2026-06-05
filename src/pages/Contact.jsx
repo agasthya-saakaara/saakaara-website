@@ -44,13 +44,13 @@ window.location.href = "/thank-you";
   return (
     <div>
       {/* Hero */}
-      <section className="py-24 bg-muted"
+      <section className="py-16 md:py-24 bg-muted"
       style={{ backgroundColor: "#3A5E2E" }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-3xl">
             <p className="text-white font-medium tracking-widest text-sm uppercase mb-4">Get in Touch</p>
-            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+            <h1 className="font-heading text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
               Let's Create Something Meaningful Together
             </h1>
             <p className="mt-6 text-lg text-white/80">
@@ -62,7 +62,7 @@ window.location.href = "/thank-you";
       </section>
 
       {/* Form + Contact Info */}
-      <section className="py-24 bg-background">
+      <section className="py-16 md:py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-5 gap-16">
             {/* Form */}
@@ -205,9 +205,9 @@ window.location.href = "/thank-you";
       </section>
 
       {/* FAQ-like Section */}
-      <section className="py-24 bg-primary text-primary-foreground">
+      <section className="py-16 md:py-24 bg-primary text-primary-foreground">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-heading text-3xl md:text-4xl font-semibold">What Happens Next?</h2>
+          <h2 className="font-heading text-2xl md:text-4xl font-semibold">What Happens Next?</h2>
           <div className="mt-12 grid sm:grid-cols-3 gap-8">
             {[
               { step: "1", title: "We Listen", desc: "Within 24 hours, our team reviews your requirements and connects with you." },

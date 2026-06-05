@@ -52,10 +52,10 @@ export default function OurStory() {
         style={{ backgroundColor: "#3A5E2E" }}
         >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-10 md:gap-16 items-center">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
               <p className="text-white font-medium tracking-widest text-sm uppercase mb-4">Our Story</p>
-              <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+              <h1 className="font-heading text-3xl md:text-5xl lg:text-6xl font-bold leading-tight">
                 From Dream to Movement
               </h1>
               <p className="mt-6 text-lg text-primary-foreground/80 leading-relaxed">
@@ -87,7 +87,7 @@ export default function OurStory() {
       </section>
 
       {/* Timeline */}
-      <section className="py-24 bg-muted">
+      <section className="py-16 md:py-24 bg-muted">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-0">
             {timelineEvents.map((event, i) => {
@@ -169,7 +169,7 @@ export default function OurStory() {
       </section>
 
       {/* Decade of Impact — HERO STATEMENT */}
-      <section className="py-24 bg-background">
+      <section className="py-16 md:py-24 bg-background">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -237,7 +237,7 @@ export default function OurStory() {
       </section>
 
       {/* Looking For */}
-      <section className="py-24 bg-muted">
+      <section className="py-16 md:py-24 bg-muted">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-heading text-3xl md:text-4xl font-semibold">Join the Movement</h2>
           <p className="mt-4 text-muted-foreground">I'm looking for:</p>
