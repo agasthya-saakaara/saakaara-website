@@ -10,6 +10,10 @@ const fadeUp = {
 };
 
 export default function Home() {
+  useEffect(() => {
+  document.title =
+    "Saakaara | Sustainable Corporate Gifting, Décor & Eco-Conscious Stationery";
+}, []);
   return (
     <div>
       {/* Hero */}
