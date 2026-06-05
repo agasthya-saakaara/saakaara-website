@@ -5,6 +5,8 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useRef } from "react";
 import SectionHeading from "../components/SectionHeading";
 import CTASection from "../components/CTASection";
+import { useEffect } from "react";
+
 
 export default function Decor() {
    useEffect(() => {
