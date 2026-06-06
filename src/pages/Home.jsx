@@ -168,17 +168,33 @@ export default function Home() {
                 className="rounded-2xl shadow-xl w-full"
               />
 
+              {/* Desktop Floating Card */}
               <div
-                className="absolute -bottom-6 -left-6 text-white p-6 rounded-2xl shadow-lg"
+                className="hidden md:block absolute -bottom-6 -left-6 text-white p-6 rounded-2xl shadow-lg"
                 style={{ backgroundColor: "#3A5E2E" }}
               >
                 <p className="font-heading text-2xl font-bold">
                   50,000+
                 </p>
-
+              
                 <p className="text-sm text-white/80">
                   Person Hours Created
                 </p>
+              </div>
+              
+              {/* Mobile Card */}
+              <div className="md:hidden mt-4">
+                <div
+                  className="bg-[#3A5E2E] text-white rounded-2xl p-5 shadow-lg"
+                >
+                  <h3 className="font-heading text-3xl font-bold">
+                    50,000+
+                  </h3>
+              
+                  <p className="mt-2 text-sm text-white/90">
+                    Person Hours Created
+                  </p>
+                </div>
               </div>
             </motion.div>
 
@@ -305,10 +321,33 @@ export default function Home() {
           className="rounded-2xl shadow-xl"
         />
 
-        <div className="absolute -bottom-6 -right-6 text-white p-6 rounded-2xl shadow-lg max-w-xs"
-        style={{ backgroundColor: "#3A5E2E" }}>
-          <p className="font-heading text-2xl font-bold">34,941</p>
-          <p className="text-sm font-medium">Trees Protected</p>
+        {/* Desktop Floating Card */}
+        <div
+          className="hidden md:block absolute -bottom-6 -right-6 text-white p-6 rounded-2xl shadow-lg max-w-xs"
+          style={{ backgroundColor: "#3A5E2E" }}
+        >
+          <p className="font-heading text-2xl font-bold">
+            34,941
+          </p>
+        
+          <p className="text-sm font-medium">
+            Trees Protected
+          </p>
+        </div>
+        
+        {/* Mobile Card */}
+        <div className="md:hidden mt-4">
+          <div
+            className="bg-[#3A5E2E] text-white rounded-2xl p-5 shadow-lg"
+          >
+            <h3 className="font-heading text-3xl font-bold">
+              34,941
+            </h3>
+        
+            <p className="mt-2 text-sm text-white/90">
+              Trees Protected
+            </p>
+          </div>
         </div>
       </motion.div>
 
@@ -336,7 +375,7 @@ export default function Home() {
                 title: "Sustainable Corporate Gifts",
                 desc: "Handcrafted gifts rooted in India's art and cultural heritage. Perfect for Diwali, New Year, client appreciation, and employee recognition.",
                 tags: ["Festival Gifting", "Client Appreciation", "Employee Awards", "C-Suite Gifting"],
-                link: "/products#heritage-craft-gifts"
+                link: "/heritage-crafts"
               },
               {
                 img: "stationery-main.png",
@@ -344,7 +383,7 @@ export default function Home() {
                 title: "Eco-Conscious Stationery",
                 desc: "Write, scan, cloud-sync. Wipe clean and reuse 100+ times. Dramatically reduce your organization's paper waste and carbon footprint.",
                 tags: ["Onboarding Kits", "Conference Giveaways", "Paper Replacement", "Leadership Stationery"],
-                link: "/products#notebooks"
+                link: "/eco-stationery"
               },
               {
                 img: "/decor.jpeg",
@@ -352,7 +391,7 @@ export default function Home() {
                 title: "Sustainable Office Décor",
                 desc: "Props, table décor, and custom art installations that combine aesthetics with environmental responsibility.",
                 tags: ["Office Redesigns", "Corporate Events", "Client Spaces", "Cultural Celebrations"],
-                link: "/products#decor"
+                link: "/decor"
               },
             ].map((product, i) => (
               <motion.div
