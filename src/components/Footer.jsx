@@ -55,6 +55,7 @@ export default function Footer() {
             <p>34,941 trees protected</p>
             <p>15+ Indian craft traditions supported</p>
           </div>
+          </div>
          
           {/* Quick Links */}
           <div>
