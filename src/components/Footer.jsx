@@ -30,7 +30,29 @@ export default function Footer() {
               50,000+ hours of livelihood created • 34,941 trees protected • 15+ Indian craft traditions supported
             </p>
           </div>
-
+          <div className="flex items-center gap-4 mt-6">
+          
+            <a
+              href="https://www.linkedin.com/company/saakaara"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/60 hover:text-white transition-colors"
+              aria-label="LinkedIn"
+            >
+              <Linkedin size={20} />
+            </a>
+          
+            <a
+              href="https://www.instagram.com/saakaara"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/60 hover:text-white transition-colors"
+              aria-label="Instagram"
+            >
+              <Instagram size={20} />
+            </a>
+          
+          </div>
           {/* Quick Links */}
           <div>
             <h4 className="font-heading text-lg mb-4">Quick Links</h4>
@@ -110,32 +132,12 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div className="flex items-center gap-4 mt-6">
-
-          <a
-            href="https://www.linkedin.com/company/saakaara"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white/60 hover:text-white transition-colors"
-          >
-            <Linkedin size={20} />
-          </a>
-
-          <a
-            href="https://www.instagram.com/saakaara"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white/60 hover:text-white transition-colors"
-          >
-            <Instagram size={20} />
-          </a>
-
-        </div>
+       
         {/* Bottom */}
         <div className="mt-12 pt-8 border-t border-primary-foreground/10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-primary-foreground/50">
-              © {new Date().getFullYear()} Saakaara. Thoughts to Things. All rights reserved.
+              © {new Date().getFullYear()} Saakaara. All rights reserved.
             </p>
             <p className="text-xs text-primary-foreground/40">
               Serving: Hyderabad · Bangalore · Mumbai · Delhi NCR · Chennai · Pune
