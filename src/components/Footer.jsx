@@ -23,33 +23,37 @@ export default function Footer() {
             alt="Saakaara"
             className="h-10 w-auto"
           />
-            <p className="text-primary-foreground/70 text-sm leading-relaxed mt-4">
-              <div className="flex items-center gap-4 mt-6">
-                <a
-                  href="https://www.linkedin.com/company/saakaara"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white/60 hover:text-white transition-colors"
-                >
-                  <Linkedin size={20} />
-                </a>
-              
-                <a
-                  href="https://www.instagram.com/saakaara"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white/60 hover:text-white transition-colors"
-                >
-                  <Instagram size={20} />
-                </a>
-              </div>
-              Saakaara helps organizations create meaningful gifting, workplace, and stationery experiences rooted in sustainability, Indian craftsmanship, and social impact.
-            </p>
-            <div className="mt-6 text-sm text-white/80 space-y-1">
+          
+          <div className="flex items-center gap-4 mt-6">
+            <a
+              href="https://www.linkedin.com/company/saakaaraindia/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/60 hover:text-white transition-colors"
+            >
+              <Linkedin size={20} />
+            </a>
+          
+            <a
+              href="https://www.instagram.com/saakaaraindia/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/60 hover:text-white transition-colors"
+            >
+              <Instagram size={20} />
+            </a>
+          </div>
+          
+          <p className="text-primary-foreground/70 text-sm leading-relaxed mt-6">
+            Saakaara helps organizations create meaningful gifting, workplace,
+            and stationery experiences rooted in sustainability, Indian craftsmanship,
+            and social impact.
+          </p>
+          
+          <div className="mt-8 text-sm text-white/80 space-y-1">
             <p>50,000+ hours of livelihood created</p>
             <p>34,941 trees protected</p>
             <p>15+ Indian craft traditions supported</p>
-          </div>
           </div>
          
           {/* Quick Links */}
