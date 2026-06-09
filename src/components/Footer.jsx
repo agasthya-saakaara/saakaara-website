@@ -14,8 +14,8 @@ export default function Footer() {
         className="text-white"
         style={{ backgroundColor: "#231F20" }}
       >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr] gap-12">
           {/* Brand */}
           <div className="lg:col-span-1">
           <img
@@ -24,35 +24,34 @@ export default function Footer() {
             className="h-10 w-auto"
           />
             <p className="text-primary-foreground/70 text-sm leading-relaxed mt-4">
+              <div className="flex items-center gap-4 mt-6">
+                <a
+                  href="https://www.linkedin.com/company/saakaara"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/60 hover:text-white transition-colors"
+                >
+                  <Linkedin size={20} />
+                </a>
+              
+                <a
+                  href="https://www.instagram.com/saakaara"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/60 hover:text-white transition-colors"
+                >
+                  <Instagram size={20} />
+                </a>
+              </div>
               Saakaara helps organizations create meaningful gifting, workplace, and stationery experiences rooted in sustainability, Indian craftsmanship, and social impact.
             </p>
-            <p className="text-white/80 text-xs leading-relaxed mt-4">
-              50,000+ hours of livelihood created • 34,941 trees protected • 15+ Indian craft traditions supported
-            </p>
+            <div className="mt-6 text-sm text-white/80 space-y-1">
+            <p>50,000+ hours of livelihood created</p>
+            <p>34,941 trees protected</p>
+            <p>15+ Indian craft traditions supported</p>
           </div>
-          <div className="flex items-center gap-4 mt-6">
-          
-            <a
-              href="https://www.linkedin.com/company/saakaara"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white/60 hover:text-white transition-colors"
-              aria-label="LinkedIn"
-            >
-              <Linkedin size={20} />
-            </a>
-          
-            <a
-              href="https://www.instagram.com/saakaara"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white/60 hover:text-white transition-colors"
-              aria-label="Instagram"
-            >
-              <Instagram size={20} />
-            </a>
-          
           </div>
+         
           {/* Quick Links */}
           <div>
             <h4 className="font-heading text-lg mb-4">Quick Links</h4>
@@ -69,9 +68,8 @@ export default function Footer() {
                   <Link
                     to={link.path}
                     onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-                    className="text-primary-foreground/70 text-sm hover:text-primary-foreground transition-colors flex items-center gap-2"
+                     className="text-primary-foreground/70 text-sm hover:text-primary-foreground transition-colors"
                   >
-                    <ArrowRight size={12} />
                     {link.label}
                   </Link>
                 </li>
@@ -134,7 +132,7 @@ export default function Footer() {
         </div>
        
         {/* Bottom */}
-        <div className="mt-12 pt-8 border-t border-primary-foreground/10">
+        <div className="mt-10 pt-6 border-t border-primary-foreground/10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-primary-foreground/50">
               © {new Date().getFullYear()} Saakaara. All rights reserved.
