@@ -138,15 +138,30 @@ export default function Footer() {
        
         {/* Bottom */}
         <div className="mt-10 pt-6 border-t border-primary-foreground/10">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-primary-foreground/50">
-              © {new Date().getFullYear()} Saakaara. All rights reserved.
-            </p>
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-sm text-primary-foreground/50">
+            © {new Date().getFullYear()} Saakaara. All rights reserved.
+          </p>
+
+          <div className="text-center">
             <p className="text-xs text-primary-foreground/40">
               Serving: Hyderabad · Bangalore · Mumbai · Delhi NCR · Chennai · Pune
             </p>
           </div>
+
+          <p className="text-xs text-primary-foreground/40">
+            Designed &amp; Developed by{" "}
+            <a
+              href="https://agasthyamavilla.framer.website/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white transition-colors"
+            >
+              Agasthya Mavilla
+            </a>
+          </p>
         </div>
+      </div>
       </div>
     </footer>
   );

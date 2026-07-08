@@ -20,6 +20,7 @@ import Contact from './pages/Contact';
 import ThankYou from "./pages/ThankYou";
 import ScrollToTop from "./components/ScrollToTop";
 import ScrollToHash from "./components/ScrollToHash";
+import Impact from "@/pages/Impact";
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -62,6 +63,7 @@ const AuthenticatedApp = () => {
         <Route path="/blog/:slug" element={<BlogPost />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/thank-you" element={<ThankYou />} />
+        <Route path="/impact" element={<Impact />} />
         <Route path="*" element={<PageNotFound />} />
       </Route>
     </Routes>
